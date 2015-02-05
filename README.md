@@ -9,18 +9,19 @@ It's just a simple JavaScript aspect weaver.
 With node.js :
 
 ```js
-var aspectWeaver = require('./weaver');
+var aspectModule = require('./weaver');
+var weaver = new aspectModule.Weaver();
 
 var myObject = { };
 myObject.helloWorld = function(){
   console.log('Hello world !');
 }
 
-aspectWeaver.after(myObject, ['helloWorld'], function(req, res) {
+weaver.after(myObject, ['helloWorld'], function(req, res) {
     console.log('After !');
 });
 
-aspectWeaver.before(myObject, ['helloWorld'], function (req, res) {
+weaver.before(myObject, ['helloWorld'], function (req, res) {
     console.log('Before !');
 });
 
