@@ -28,7 +28,7 @@ myObject.helloWorld();
 //Print in the console:
 //Before !
 //Hello wolrd !
-//After
+//After !
 ```
 
 
