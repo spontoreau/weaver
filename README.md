@@ -9,8 +9,8 @@ It's just a simple JavaScript aspect weaver.
 With node.js :
 
 ```js
-var aspectModule = require('./weaver');
-var weaver = new aspectModule.Weaver();
+var Weaver = require('./weaver').Weaver;
+var weaver = new Weaver();
 
 var myObject = { };
 myObject.helloWorld = function(){
